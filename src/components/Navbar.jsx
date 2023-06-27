@@ -1,5 +1,6 @@
 import React from "react";
-import { FaLanguage } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/imgs/logo.png";
 
 const Navbar = () => {
@@ -8,13 +9,13 @@ const Navbar = () => {
       {/* flex container */}
       <div className="flex items-center justify-between">
         {/* logo */}
-        <div className="pt-2">
+        <div className="pt-2 basis-1/3">
           <a href="/">
             <img src={logo} alt="logo" />
           </a>
         </div>
         {/* navbar menu items */}
-        <ul className="hidden md:flex space-x-6">
+        <ul className="hidden md:flex space-x-6 basis-1/3">
           <li>
             <a
               href="#"
@@ -45,12 +46,13 @@ const Navbar = () => {
           </li>
         </ul>
         {/* button menu */}
-        <div className="items-end justify-between text-right hiden md:flex">
-          <div className="flex items-center">
-            <FaLanguage />
-            <a href="#" className="p-2 border-r-2 border-navBorder rounded-sm">
+        <div className="items-center justify-end hiden md:flex basis-1/3">
+          <div className=" flex items-center border-r-2 border-navBorder rounded-sm pr-3">
+            <FontAwesomeIcon icon={faGlobe} />
+            <a href="#" className="p-2 ">
               EN
             </a>
+            <FontAwesomeIcon icon={faChevronDown} />
           </div>
           <a
             href="#"
