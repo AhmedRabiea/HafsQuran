@@ -43,13 +43,14 @@ const ServicesData = () => {
         </h1>
       </div>
       <div className="flex gap-7 mt-14">
-        {services.map((items) => (
+        {services.map((items, idx) => (
           <ServicesCards
             key={items.id}
             item={items}
             title={items.title}
             logo={items.logo}
             desc={items.desc}
+            active={idx === 1}
           />
         ))}
       </div>

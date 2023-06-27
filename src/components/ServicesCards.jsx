@@ -1,9 +1,13 @@
+import clsx from "clsx";
 import React from "react";
 
 const ServicesCards = (props) => {
   return (
     <div
-      className="w-1/4 h-56 border-2 border-homeItem rounded-md bg-white p-6"
+      className={clsx(
+        "w-1/4 h-56 border-2 border-homeItem rounded-md p-6",
+        props.active ? "bg-homeItem text-white" : "bg-white"
+      )}
       id="servicesCard"
     >
       <img src={props.logo} alt="ReadOnly" className="mx-auto" />

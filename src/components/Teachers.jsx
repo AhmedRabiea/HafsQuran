@@ -5,7 +5,6 @@ import {
   FaArrowCircleLeft,
   FaArrowCircleRight,
   FaCheckCircle,
-  FaRegCheckCircle,
 } from "react-icons/fa";
 
 const Teachers = () => {

@@ -1,5 +1,12 @@
 import React from "react";
 
+import {
+  FaArrowCircleLeft,
+  FaArrowCircleRight,
+  FaArrowRight,
+  FaCheckCircle,
+} from "react-icons/fa";
+
 import rate from "../assets/imgs/blogsicon.png";
 
 const BlogsCards = (props) => {
@@ -19,9 +26,10 @@ const BlogsCards = (props) => {
         <p className="text-blogsparagraph">{props.desc}</p>
       </div>
       <footer className="mt-5 text-sm flex justify-between">
-        <a href="#" className="text-homeItem">
-          Read More
-        </a>
+        <div className="flex items-center text-homeItem">
+          <a href="#">Read More</a>
+          <FaArrowRight className="pl-1" />
+        </div>
         <img src={rate} alt="rate" />
       </footer>
     </div>
