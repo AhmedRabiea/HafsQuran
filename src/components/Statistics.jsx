@@ -1,8 +1,8 @@
 //styles
 import "../assets/styles/Statistics.css";
-import teacher from "../assets/imgs/teacher.png";
-import student from "../assets/imgs/student.png";
-import classroom from "../assets/imgs/classroom.png";
+import teacher from "../assets/imgs/teacher.svg";
+import student from "../assets/imgs/student.svg";
+import classroom from "../assets/imgs/classroom.svg";
 
 import React, { useState } from "react";
 import StatisticsCards from "./StatisticsCards";
