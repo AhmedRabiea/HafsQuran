@@ -11,23 +11,16 @@ const Navbar = () => {
         {/* logo */}
         <div className="pt-2 basis-1/3">
           <a href="/">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" className="h-16 w-20" />
           </a>
         </div>
         {/* navbar menu items */}
-        <ul className="hidden md:flex space-x-6 basis-1/3">
-          <li>
-            <a
-              href="#"
-              className="p-2 pt-1 px-6 text-center text-homeItem border-2 border-homeItem rounded-full hover:text-white hover:bg-homeItem"
-            >
-              Home
-            </a>
+        <ul className="items-center justify-between hidden md:flex  basis-1/3">
+          <li className="p-2 pt-1 px-6 text-center text-homeItem border-2 border-homeItem rounded-full hover:text-white hover:bg-homeItem">
+            <a href="#">Home</a>
           </li>
-          <li>
-            <a href="#" className="hover:text-homeItem">
-              About
-            </a>
+          <li className="hover:text-homeItem">
+            <a href="#">About</a>
           </li>
           <li>
             <a href="#" className="hover:text-homeItem">
@@ -54,12 +47,9 @@ const Navbar = () => {
             </a>
             <FontAwesomeIcon icon={faChevronDown} />
           </div>
-          <a
-            href="#"
-            className="p-3 px-6 pt-2 text-center text-white bg-homeItem rounded-xl baseline ml-10"
-          >
+          <button className="p-3 px-8 text-center pt-2 text-white bg-homeItem rounded-xl baseline ml-10 mr-3">
             Get Start
-          </a>
+          </button>
         </div>
       </div>
     </nav>

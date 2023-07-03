@@ -1,6 +1,6 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-
-import { FaArrowCircleRight, FaArrowRight } from "react-icons/fa";
 
 const ContactForm = () => {
   return (
@@ -52,13 +52,11 @@ const ContactForm = () => {
           placeholder="Describe what you need here.."
         ></textarea>
       </div>
-      <a
-        href="#"
-        className="p-2 px-24 bg-homeItem rounded-lg w-52 h-11 text-white flex"
-      >
-        <button>Submit </button>
-        <FaArrowRight />
-      </a>
+
+      <button className="p-2 px-24 bg-homeItem rounded-lg text-white flex items-center justify-center gap-2">
+        Submit
+        <FontAwesomeIcon icon={faArrowRight} />
+      </button>
     </form>
   );
 };

@@ -42,7 +42,7 @@ const ServicesData = () => {
           <span className="text-homeItem">HafsQuran</span> SERVICES
         </h1>
       </div>
-      <div className="flex gap-7 mt-14">
+      <div className="flex gap-3 mt-14">
         {services.map((items, idx) => (
           <ServicesCards
             key={items.id}

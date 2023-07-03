@@ -6,6 +6,8 @@ import blogslast from "../assets/imgs/blogswhy2.png";
 
 import React, { useState } from "react";
 import BlogsCards from "./BlogsCards";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Blogs = () => {
   const [blogsCards, setBlogsCards] = useState([
@@ -35,32 +37,32 @@ const Blogs = () => {
     },
   ]);
   return (
-    <div className="mt-24 flex flex-col">
-      <div className="text-center">
+    <div className="mt-24 items-center justify-center text-center">
+      <div>
         <h4 className="text-headers font-normal text-sm">Blogs</h4>
         <h1 className="font-bold text-4xl">
           <span className="text-homeItem">HafsQuran</span> BLOGS
         </h1>
       </div>
       {/* Buttons */}
-      <div className="flex mx-auto text-white mt-6 w-1/3 h-10">
+      <div className="flex text-white mt-6 h-10 items-center w-ful justify-center">
         <a href="#" className="border-2 rounded-3xl bg-homeItem px-10 p-2">
           <button>Articals</button>
         </a>
         <a
           href="#"
-          className="text-center text-buttondesc border-2 rounded-3xl bg-buttonsblogs px-10 ml-4 p-2"
+          className="text-center text-buttondesc border-2 rounded-3xl bg-buttonsblogs px-10 ml-4 p-2 hover:bg-homeItem hover:text-white"
         >
           <button>Videos</button>
         </a>
         <a
           href="#"
-          className="text-center text-buttondesc border-2 rounded-3xl bg-buttonsblogs px-10 p-2 ml-5 "
+          className="text-center text-buttondesc border-2 rounded-3xl bg-buttonsblogs px-10 p-2 ml-5 hover:bg-homeItem hover:text-white"
         >
           <button>Audio</button>
         </a>
       </div>
-      <div id="blogsCards" className="flex gap-5 mt-16">
+      <div id="blogsCards" className="flex gap-5 mt-16 w-full">
         {blogsCards.map((items) => (
           <BlogsCards
             items={items}
@@ -71,14 +73,10 @@ const Blogs = () => {
           />
         ))}
       </div>
-      <footer className="mt-64 text-center">
-        <a
-          href="#"
-          className="border-2 border-homeItem text-homeItem p-3 px-10 rounded-lg w-48 h-11"
-        >
-          <button>View All Blogs</button>
-        </a>
-      </footer>
+      <button className="mt-16 border-2 border-homeItem text-homeItem text-center rounded-lg w-48 h-11">
+        View All Blogs
+        <FontAwesomeIcon icon={faArrowRight} className="pl-3" />
+      </button>
     </div>
   );
 };

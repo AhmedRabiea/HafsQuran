@@ -2,7 +2,7 @@ import React from "react";
 
 const StatisticsCards = (props) => {
   return (
-    <div className="text-center  px-24">
+    <div className="text-center">
       <img
         src={props.logo}
         alt="teacher"

@@ -1,16 +1,10 @@
 import React from "react";
-import {
-  FaAudioDescription,
-  FaBook,
-  FaBookOpen,
-  FaBookReader,
-  FaCheckCircle,
-  FaYoutube,
-  FaYoutubeSquare,
-} from "react-icons/fa";
+import { FaAudioDescription, FaBookOpen, FaYoutube } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //imgs
 import about from "../assets/imgs/about.png";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
@@ -56,12 +50,10 @@ const About = () => {
         </ul>
 
         {/* button */}
-        <a
-          href="#"
-          className="p-3 px-6 pt-2 border-2 border-homeItem rounded-lg mt-5 w-56 h-11 text-homeItem"
-        >
-          <button>Know More About Us</button>
-        </a>
+        <button className="p-3 px-6 pt-2 border-2 border-homeItem rounded-lg mt-5 h-11 w-60 text-homeItem">
+          Know More About Us
+          <FontAwesomeIcon icon={faArrowRight} className="pl-2" />
+        </button>
       </div>
     </div>
   );

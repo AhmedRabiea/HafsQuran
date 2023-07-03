@@ -14,8 +14,11 @@ const Statistics = () => {
     { logo: classroom, number: "6K", title: "Classroom" },
   ]);
   return (
-    <div className="flex mt-32 h-72 text-white rounded-md" id="statistics">
-      <div className="basis-1/2 p-20">
+    <div
+      className="flex gap-28 w-full px-20 py-12 mt-32 items-center justify-center text-white rounded-md"
+      id="statistics"
+    >
+      <div className="w-full">
         <h4 className="text-white font-normal">Statistics</h4>
         <h1 className="font-medium text-4xl">
           <span className="text-homeItem">HafsQuran</span> STATISTICS
@@ -26,7 +29,7 @@ const Statistics = () => {
           since the 1500s, when an
         </p>
       </div>
-      <div className="basis-1/2 flex items-center rounded-lg">
+      <div className="flex gap-24 rounded-lg">
         {statisticsCards.map((cards) => (
           <StatisticsCards
             cards={cards}
