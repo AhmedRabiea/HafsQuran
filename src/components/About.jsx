@@ -13,7 +13,9 @@ const About = () => {
         <img src={about} alt="aboutHafsQuran" />
       </div>
       <div className="flex flex-col basis-1/2">
-        <span className="text-headers font-normal">About Us</span>
+        <span className="text-headers font-normal border-headers">
+          About Us
+        </span>
         <h1 className="text-4xl font-bold">
           ABOUT <span className="text-homeItem">HafsQuran</span>
         </h1>

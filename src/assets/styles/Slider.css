@@ -1,5 +1,5 @@
 #slider {
   height: calc(100vh - 130px);
-  background: url("../imgs/sliderbg.png") no-repeat center fixed;
+  background: url("../imgs/sliderbg.png") no-repeat center;
   background-size: cover;
 }
