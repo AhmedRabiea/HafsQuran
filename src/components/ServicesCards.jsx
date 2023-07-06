@@ -5,7 +5,7 @@ const ServicesCards = (props) => {
   return (
     <div
       className={clsx(
-        "w-1/4 border-2 border-homeItem rounded-md p-6",
+        "md:w-1/4 border-2 border-homeItem m-2 rounded-md p-6",
         props.active ? "bg-homeItem text-white" : "bg-white"
       )}
       id="servicesCard"

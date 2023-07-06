@@ -39,7 +39,7 @@ const Navbar = () => {
           </li>
         </ul>
         {/* button menu */}
-        <div className="items-center justify-end hiden md:flex basis-1/3">
+        <div className="items-center justify-end hidden md:flex basis-1/3">
           <div className=" flex items-center border-r-2 border-navBorder rounded-sm pr-3">
             <FontAwesomeIcon icon={faGlobe} />
             <a href="#" className="p-2 ">

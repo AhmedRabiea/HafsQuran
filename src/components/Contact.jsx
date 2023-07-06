@@ -33,10 +33,12 @@ const Contact = () => {
     <div className="flex-col mt-28 text-center">
       <div className="p-1">
         <p className="text-sm font-normal text-headers">Contact US</p>
-        <h1 className="text-4xl font-bold">We'd Love to Hear From You</h1>
+        <h1 className="text-2xl md:text-4xl font-bold">
+          We'd Love to Hear From You
+        </h1>
         <p className="text-sm font-normal mt-1">Chat to our friendly team</p>
       </div>
-      <div className="flex gap-8 mt-16">
+      <div className="flex flex-col md:flex-row gap-8 mt-16">
         {contactCards.map((items) => (
           <ContactCards
             items={items}
@@ -47,11 +49,11 @@ const Contact = () => {
           />
         ))}
       </div>
-      <div className="flex gap-28">
-        <div className="basis-1/2">
+      <div className="flex flex-col-reverse md:flex-row gap-28">
+        <div className="md:basis-1/2">
           <ContactForm />
         </div>
-        <div className="basis-1/2 h-full mt-16">
+        <div className="md:basis-1/2 h-full mt-16 m-2 md:m-0">
           <img src={chart} alt="location" />
         </div>
       </div>

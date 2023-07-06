@@ -62,7 +62,10 @@ const Blogs = () => {
           <button>Audio</button>
         </a>
       </div>
-      <div id="blogsCards" className="flex gap-5 mt-16 w-full">
+      <div
+        id="blogsCards"
+        className="flex flex-col md:flex-row gap-5 mt-16 w-full"
+      >
         {blogsCards.map((items) => (
           <BlogsCards
             items={items}

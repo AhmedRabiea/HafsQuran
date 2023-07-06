@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="px-24">
+    <div className="px-0 md:px-24">
       <Navbar />
       <Slider />
       <About />

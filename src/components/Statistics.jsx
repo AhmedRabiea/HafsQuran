@@ -15,12 +15,12 @@ const Statistics = () => {
   ]);
   return (
     <div
-      className="flex gap-28 w-full px-20 py-12 mt-32 items-center justify-center text-white rounded-md"
+      className="flex flex-col-reverse gap-10 md:flex md:flex-row md:gap-28 w-full px-20 py-12 mt-32 items-center justify-center text-white rounded-md"
       id="statistics"
     >
       <div className="w-full">
         <h4 className="text-white font-normal">Statistics</h4>
-        <h1 className="font-medium text-4xl">
+        <h1 className="font-medium md:text-4xl text-2xl">
           <span className="text-homeItem">HafsQuran</span> STATISTICS
         </h1>
         <p className="font-normal mt-4">
