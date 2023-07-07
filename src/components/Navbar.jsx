@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FaTimes, FaBars } from "react-icons/fa";
 import logo from "../assets/imgs/logo.png";
 
 const Navbar = () => {
+  const navLinks = [
+    { title: "Home", link: "/" },
+    { title: "About", link: "/" },
+    { title: "Blog", link: "/" },
+    { title: "Pricing", link: "/" },
+    { title: "Contact", link: "/" },
+  ];
+
+  const [open, setOpen] = useState(false);
+
+  const handleMenu = () => {
+    setOpen((prev) => !prev);
+  };
   return (
     <nav className="relative mt-6 w-full">
       {/* flex container */}
@@ -11,9 +25,10 @@ const Navbar = () => {
         {/* logo */}
         <div className="pt-2 basis-1/3">
           <a href="/">
-            <img src={logo} alt="logo" className="h-16 w-20" />
+            <img src={logo} alt="logo" className="h-16 w-20 ml-2 md:ml-0" />
           </a>
         </div>
+
         {/* navbar menu items */}
         <ul className="items-center justify-between hidden md:flex  basis-1/3">
           <li className="p-2 pt-1 px-6 text-center text-homeItem border-2 border-homeItem rounded-full hover:text-white hover:bg-homeItem">
@@ -51,7 +66,31 @@ const Navbar = () => {
             Get Start
           </button>
         </div>
+
+        {/* hamburger icon */}
+        <div className=" mr-2 flex md:hidden">
+          <button
+            type="button"
+            onClick={handleMenu}
+            className="inline-flex p-3 rounded-lg text-gray-300 bg-homeItem hover:text-white items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2"
+          >
+            <span className="sr-only">open main menu</span>
+            {open == true ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
       </div>
+      {/* mobile menu */}
+      {open ? (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-homeItem m-1 rounded-lg">
+            {navLinks.map((link) => (
+              <a className="block text-white bg-homeItem hover:bg-blue-400 py-2 px-3 rounded-md text-base font-medium">
+                {link.title}
+              </a>
+            ))}
+          </div>
+        </div>
+      ) : null}
     </nav>
   );
 };

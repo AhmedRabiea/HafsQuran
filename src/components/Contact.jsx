@@ -49,7 +49,7 @@ const Contact = () => {
           />
         ))}
       </div>
-      <div className="flex flex-col-reverse md:flex-row gap-28">
+      <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-28 ">
         <div className="md:basis-1/2">
           <ContactForm />
         </div>

@@ -52,11 +52,11 @@ const Slider = () => {
         style={{ backgroundImage: `url(${slider[currentIndex].url})` }}
         className="w-full h-full bg-no-repeat bg-cover rounded-sm duration-300 ease-in-out flex"
       >
-        <div className="text-left my-auto md:px-24 flex flex-col gap-10">
+        <div className="text-left my-auto md:px-24 flex flex-col gap-10 px-2">
           <div className="text-2xl font-bold whitespace-pre md:text-4xl">
             {slider[currentIndex].header}
           </div>
-          <div className="text-paragraph whitespace-pre">
+          <div className="text-paragraph md:whitespace-pre">
             {slider[currentIndex].desc}
           </div>
           <div className="md:mt-24px flex gap-3">
