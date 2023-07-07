@@ -25,7 +25,11 @@ const Navbar = () => {
         {/* logo */}
         <div className="pt-2 basis-1/3">
           <a href="/">
-            <img src={logo} alt="logo" className="h-16 w-20 ml-2 md:ml-0" />
+            <img
+              src={logo}
+              alt="logo"
+              className="h-16 w-20 ml-2 md:ml-0 object-contain"
+            />
           </a>
         </div>
 

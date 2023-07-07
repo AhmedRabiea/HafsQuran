@@ -30,7 +30,7 @@ const Teachers = () => {
       </div>
       <div className="md:basis-2/3 mt-5 md:mt-0 p-1 md:p-0">
         <p className="text-sm text-headers font-normal">Teachers</p>
-        <h1 className="text-4xl">
+        <h1 className="text-2xl md:text-4xl">
           <span className="text-homeItem">HafsQuran</span> TEACHERS
         </h1>
         <h1 className="mt-14 text-lg font-bold">

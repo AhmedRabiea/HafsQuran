@@ -14,7 +14,7 @@ const About = () => {
       </div>
       <div className="flex flex-col basis-1/2">
         <span className="text-headers font-norma mt-2">About Us</span>
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-2xl md:text-4xl font-bold">
           ABOUT <span className="text-homeItem">HafsQuran</span>
         </h1>
         <p className="text-paragraph mt-3">
