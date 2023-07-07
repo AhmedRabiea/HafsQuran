@@ -49,11 +49,11 @@ const Contact = () => {
           />
         ))}
       </div>
-      <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-28 ">
+      <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-28">
         <div className="md:basis-1/2">
           <ContactForm />
         </div>
-        <div className="md:basis-1/2 h-full mt-16 m-2 md:m-0">
+        <div className="md:basis-1/2 h-full md:mt-16 m-2 md:m-0">
           <img src={chart} alt="location" />
         </div>
       </div>
