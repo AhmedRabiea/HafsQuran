@@ -38,7 +38,7 @@ const Contact = () => {
         </h1>
         <p className="text-sm font-normal mt-1">Chat to our friendly team</p>
       </div>
-      <div className="flex flex-col md:flex-row gap-8 mt-16">
+      <div className="flex flex-col md:flex-row gap-5 mt-16">
         {contactCards.map((items) => (
           <ContactCards
             items={items}

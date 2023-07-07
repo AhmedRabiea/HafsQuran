@@ -13,22 +13,22 @@ const Slider = () => {
   const [slider, setSlider] = useState([
     {
       url: slider1,
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting \nindustry. Lorem Ipsum has been the industry's standard dummy text \never since the 1500s.",
       header: "Read Quran Everyday \nAdd On Your Daily \nRoutine",
     },
     {
       url: slider2,
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting \nindustry. Lorem Ipsum has been the industry's standard dummy text \never since the 1500s.",
       header: "Read Quran Everyday \nAdd On Your Daily \nRoutine",
     },
     {
       url: slider3,
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting \nindustry. Lorem Ipsum has been the industry's standard dummy text \never since the 1500s.",
       header: "Read Quran Everyday \nAdd On Your Daily \nRoutine",
     },
     {
       url: slider4,
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting \nindustry. Lorem Ipsum has been the industry's standard dummy text \never since the 1500s.",
       header: "Read Quran Everyday \nAdd On Your Daily \nRoutine",
     },
   ]);
@@ -52,24 +52,20 @@ const Slider = () => {
         style={{ backgroundImage: `url(${slider[currentIndex].url})` }}
         className="w-full h-full bg-no-repeat bg-cover rounded-sm duration-300 ease-in-out flex"
       >
-        <div className="w-full text-left my-auto md:px-24">
+        <div className="text-left my-auto md:px-24 flex flex-col gap-10">
           <div className="text-2xl font-bold whitespace-pre md:text-4xl">
             {slider[currentIndex].header}
           </div>
-          <div className="text-paragraph">{slider[currentIndex].desc}</div>
-          <div className="px-10 md:mt-24px">
-            <a
-              href="#"
-              className="p-3 px-6 bg-homeItem rounded-lg text-white w-6"
-            >
-              <button>Free Sessions</button>
-            </a>
-            <a
-              href="#"
-              className="ml-3 p-3 px-6 border-2 border-homeItem rounded-lg text-homeItem "
-            >
-              <button>Sign up as a Teacher</button>
-            </a>
+          <div className="text-paragraph whitespace-pre">
+            {slider[currentIndex].desc}
+          </div>
+          <div className="md:mt-24px flex gap-3">
+            <button className="p-3 px-4 rounded-lg text-white bg-homeItem">
+              Free Sessions
+            </button>
+            <button className="p-3 border-2 px-6 border-homeItem rounded-lg bg-white text-homeItem">
+              Sign up as a Teacher
+            </button>
           </div>
         </div>
       </div>
