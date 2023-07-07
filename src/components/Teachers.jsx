@@ -10,14 +10,14 @@ import {
 
 const Teachers = () => {
   return (
-    <div className="flex flex-col md:flex-row md:gap-10 bg-teachersbg md:p-24 mt-28 rounded-xl">
+    <div className="flex flex-col md:flex-row md:gap-28 bg-teachersbg md:p-24 mt-28 rounded-xl">
       <div className="md:basis-1/3 ">
         <img
           src={teachers}
           alt="teacher"
-          className="w-full px-4 bg-white md:bg-inherit md:px-0 md:w-auto"
+          className="w-full px-4 py-5 md:py-0 bg-inherit md:px-0 md:w-auto"
         />
-        <div className="flex items-center justify-between mt-4 m-2 md:m-0">
+        <div className="flex items-center justify-between mx-2 md:mx-0 mt-1 md:mt-10">
           <FontAwesomeIcon
             icon={faChevronLeft}
             className="text-center text-white p-4 bg-black/20 rounded-lg"
@@ -28,7 +28,7 @@ const Teachers = () => {
           />
         </div>
       </div>
-      <div className="md:basis-2/3 mt-5 md:mt-0">
+      <div className="md:basis-2/3 mt-5 md:mt-0 p-1 md:p-0">
         <p className="text-sm text-headers font-normal">Teachers</p>
         <h1 className="text-4xl">
           <span className="text-homeItem">HafsQuran</span> TEACHERS
