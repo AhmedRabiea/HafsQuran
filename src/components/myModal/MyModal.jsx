@@ -10,7 +10,7 @@ const MyModal = ({ visible, onClose, onCancel }) => {
       id="container"
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex items-center justify-center"
     >
-      <div className="bg-white p-1 mx-auto md:mx-0 w-full md:p-10  border-2 rounded-lg">
+      <div className="bg-white p-1 mx-auto md:mx-0 w-full md:w-auto md:p-10  border-2 rounded-lg">
         <PopupRegisteration onClose={onClose} onCancel={onCancel} />
       </div>
     </div>
