@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FaTimes, FaBars } from "react-icons/fa";
+import { FaTimes, FaBars, FaUser } from "react-icons/fa";
 import logo from "../assets/imgs/logo.png";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const navLinks = [
     { title: "Home", link: "/" },
     { title: "About", link: "/" },
@@ -66,13 +66,24 @@ const Navbar = () => {
             </a>
             <FontAwesomeIcon icon={faChevronDown} />
           </div>
-          <button className="p-3 px-8 text-center pt-2 text-white bg-homeItem rounded-xl baseline ml-10 mr-3">
+          <button
+            onClick={() => props.setShowModal(true)}
+            onClose={() => props.setShowModal(false)}
+            className="p-3 px-8 text-center pt-2 text-white bg-homeItem rounded-xl baseline ml-10 mr-3"
+          >
             Get Start
           </button>
         </div>
 
         {/* hamburger icon */}
-        <div className=" mr-2 flex md:hidden">
+        <div className=" mr-2 flex gap-4 md:hidden">
+          <button
+            onClick={() => props.setShowModal(true)}
+            onClose={() => props.setShowModal(false)}
+            className="p-3 rounded-lg text-gray-300 bg-homeItem hover:text-white items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2"
+          >
+            <FaUser />
+          </button>
           <button
             type="button"
             onClick={handleMenu}
