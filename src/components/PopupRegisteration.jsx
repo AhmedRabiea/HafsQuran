@@ -19,6 +19,7 @@ const PopupRegisteration = (props) => {
     );
 
     setMyPositions(positionsResult.data.data.positions);
+    console.log(positionsResult.data.data.positions);
   };
 
   useEffect(() => {
@@ -122,9 +123,9 @@ const PopupRegisteration = (props) => {
           data-te-select-placeholder="Select your Position"
           className="border-2 border-inputborder rounded-md p-2 w-full bg-white"
         >
-          {myPositions.map((positions) => {
-            <option value={positions.name}>{positions.name}</option>;
-          })}
+          {myPositions.map((positions) => (
+            <option value={positions.name}>{positions.name}</option>
+          ))}
         </select>
       </div>
       <div className="flex gap-8">
