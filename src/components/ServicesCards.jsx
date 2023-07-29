@@ -11,7 +11,7 @@ const ServicesCards = (props) => {
       id="servicesCard"
     >
       <img src={props.logo} alt="ReadOnly" className="mx-auto" />
-      <header class="text-center font-bold mt-3">{props.title}</header>
+      <header className="text-center font-bold mt-3">{props.title}</header>
       <div
         className={clsx(
           "text-paragraph font-normal mt-4",

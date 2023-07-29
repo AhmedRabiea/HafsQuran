@@ -48,7 +48,7 @@ const ContactForm = () => {
         <textarea
           id="message"
           rows="4"
-          class="block p-2.5 w-full text-sm font-normal border-2 border-inputborder rounded-sm"
+          className="block p-2.5 w-full text-sm font-normal border-2 border-inputborder rounded-sm"
           placeholder="Describe what you need here.."
         ></textarea>
       </div>
