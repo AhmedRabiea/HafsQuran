@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FaTimes, FaBars, FaUser } from "react-icons/fa";
 import logo from "../assets/imgs/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   const navLinks = [
@@ -66,13 +67,14 @@ const Navbar = (props) => {
             </a>
             <FontAwesomeIcon icon={faChevronDown} />
           </div>
-          <button
+          <Link
+            to="register"
             onClick={() => props.setShowModal(true)}
             onClose={() => props.setShowModal(false)}
             className="p-3 px-8 text-center pt-2 text-white bg-homeItem rounded-xl baseline ml-10 mr-3"
           >
             Get Start
-          </button>
+          </Link>
         </div>
 
         {/* hamburger icon */}
