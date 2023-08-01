@@ -17,6 +17,10 @@ const PopupRegisteration = (props) => {
   const [myPositions, setMyPositions] = useState([]);
   const [catchErrors, setCatchErrors] = useState({});
 
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [loginError, setLoginError] = useState({});
+
   const [showRegister, setShowRegister] = useState(false);
 
   const getCountries = async () => {
@@ -60,6 +64,26 @@ const PopupRegisteration = (props) => {
       });
   };
 
+  const handleSiginIn = () => {
+    axios
+      .post("https://mars.bltzo.com/api/v1/users/login", {
+        email: loginEmail,
+        password: loginPassword,
+      })
+      .then(() => {
+        props.handleClose();
+        props.setShowWelcome(true);
+        setTimeout(() => {
+          props.setShowWelcome(false);
+        }, 3000);
+      })
+      .catch((error) => {
+        if (error.response.data.error.errors)
+          setLoginError(error.response.data.error.errors);
+        else console.log(error.response.data.error.message);
+      });
+  };
+
   useEffect(() => {
     getCountries();
   }, []);
@@ -68,17 +92,18 @@ const PopupRegisteration = (props) => {
     getPositions();
   }, []);
 
+  // csrf token
   return (
     <div className="text-left mt-2 text-homeItem">
       <div className="flex gap-4 w-full text-homeItem mb-6">
         <Link
-          className="p-2 basis-1/2 border-2 border-homeItem rounded-md text-center"
+          className="p-2 basis-1/2 border-b-2 rounded-md text-center border-homeItem"
           to="register"
         >
           Register Now
         </Link>
         <Link
-          className="p-2 basis-1/2 border-2 border-homeItem rounded-md text-center"
+          className="p-2 basis-1/2 hover:border-b-2 border-homeItem rounded-md text-center"
           to="signin"
         >
           Sign In
@@ -321,8 +346,15 @@ const PopupRegisteration = (props) => {
                   type="email"
                   className="border-2 border-inputborder rounded-md text-sm font-normal block w-full p-2"
                   placeholder="Enter your email address"
+                  value={loginEmail}
+                  onChange={(event) => {
+                    setLoginEmail(event.target.value);
+                  }}
                   required
                 />
+                <span className="text-lg font-normal text-red-700">
+                  {loginError.email}
+                </span>
               </div>
               <div className="mb-6">
                 <label htmlFor="password">Your Password</label>
@@ -330,12 +362,25 @@ const PopupRegisteration = (props) => {
                   type="password"
                   className="border-2 border-inputborder rounded-md text-sm font-normal block w-full p-2"
                   placeholder="Enter your password"
+                  value={loginPassword}
+                  onChange={(event) => {
+                    setLoginPassword(event.target.value);
+                  }}
                   required
                 />
+                <span className="text-lg font-normal text-red-700">
+                  {loginError.password}
+                </span>
               </div>
-              <button className="w-full p-2 bg-homeItem text-white font-normal text-center rounded-md">
+              <button
+                onClick={handleSiginIn}
+                className="w-full p-2 bg-homeItem text-white font-normal text-center rounded-md mb-2"
+              >
                 SignIn
               </button>
+              <Link to="forgetPassword" className="font-normal underline">
+                Forget Your Password?
+              </Link>
             </div>
           }
         />
