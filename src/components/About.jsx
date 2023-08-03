@@ -8,8 +8,8 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
-    <div className="mt-24 mx-12 md:flex">
-      <div className="md:basis-1/2 brightness-50">
+    <div className="mt-24 mx-12 lg:flex">
+      <div className="lg:basis-1/2 brightness-50">
         <img src={about} alt="aboutHafsQuran" />
       </div>
       <div className="flex flex-col basis-1/2">

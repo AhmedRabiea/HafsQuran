@@ -15,7 +15,7 @@ const Statistics = () => {
   ]);
   return (
     <div
-      className="flex flex-col-reverse gap-10 md:flex md:flex-row md:gap-28 w-full md:px-20 py-12 mt-32 items-center justify-center text-white rounded-md"
+      className="flex flex-col-reverse gap-10 lg:flex lg:flex-row md:gap-28 w-full md:px-20 py-12 mt-32 items-center justify-center text-white rounded-md"
       id="statistics"
     >
       <div className="w-full px-5 md:px-0">
