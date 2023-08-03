@@ -6,7 +6,7 @@ import rate from "../assets/imgs/blogsicon.png";
 
 const BlogsCards = (props) => {
   return (
-    <div className="m-2 md:m-0 md:w-1/4 rounded-lg bg-white">
+    <div className="m-2 lg:m-0 lg:w-1/4 rounded-lg bg-white">
       <img
         src={props.img}
         alt=""

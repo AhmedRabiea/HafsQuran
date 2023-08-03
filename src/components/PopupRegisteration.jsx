@@ -103,7 +103,7 @@ const PopupRegisteration = (props) => {
           Register Now
         </Link>
         <Link
-          className="p-2 basis-1/2 hover:border-b-2 border-homeItem rounded-md text-center"
+          className="p-2 basis-1/2 hover:border-b-2 border-homeItem rounded-md text-center active:border-b-2"
           to="signin"
         >
           Sign In

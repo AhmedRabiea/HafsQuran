@@ -29,13 +29,13 @@ const Navbar = (props) => {
             <img
               src={logo}
               alt="logo"
-              className="h-16 w-20 ml-2 md:ml-0 object-contain"
+              className="h-16 w-20 ml-2 lg:ml-0 object-contain"
             />
           </a>
         </div>
 
         {/* navbar menu items */}
-        <ul className="items-center justify-between hidden md:flex  basis-1/3">
+        <ul className="items-center justify-between hidden lg:flex  basis-1/3">
           <li className="p-2 pt-1 px-6 text-center text-homeItem border-2 border-homeItem rounded-full hover:text-white hover:bg-homeItem">
             <a href="#">Home</a>
           </li>
@@ -59,7 +59,7 @@ const Navbar = (props) => {
           </li>
         </ul>
         {/* button menu */}
-        <div className="items-center justify-end hidden md:flex basis-1/3">
+        <div className="items-center justify-end hidden lg:flex basis-1/3">
           <div className=" flex items-center border-r-2 border-navBorder rounded-sm pr-3">
             <FontAwesomeIcon icon={faGlobe} />
             <a href="#" className="p-2 ">
@@ -78,7 +78,7 @@ const Navbar = (props) => {
         </div>
 
         {/* hamburger icon */}
-        <div className=" mr-2 flex gap-4 md:hidden">
+        <div className=" mr-2 flex gap-4 lg:hidden">
           <button
             onClick={() => props.setShowModal(true)}
             onClose={() => props.setShowModal(false)}
@@ -98,7 +98,7 @@ const Navbar = (props) => {
       </div>
       {/* mobile menu */}
       {open ? (
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-homeItem m-1 rounded-lg">
             {navLinks.map((link) => (
               <a className="block text-white bg-homeItem hover:bg-blue-400 py-2 px-3 rounded-md text-base font-medium">

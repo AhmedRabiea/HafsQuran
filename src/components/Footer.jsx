@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="bg-footerbg mb-36 mt-40 ">
+    <div className="bg-footerbg mb-16 lg:mb-28 mt-40">
       <div className="h-auto p-4 lg:p-0 lg:h-96 flex flex-col lg:flex-row lg:gap-40 lg:items-center lg:justify-between w-full">
         <div className="flex flex-row gap-5 lg:gap-0 lg:block lg:basis-1/3 lg:ml-4 lg:px-8">
           <img src={footerlogo} alt="hafsquran" className="basis-1/3" />
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         <div className="mt-10 lg:mt-0 text-center lg:text-left lg:basis-1/3">
           <h1 className="text-white font-normal text-xl">Quick Links</h1>
-          <ul className="flex flex-row gap-5 lg:gap-0 justify-center lg:flex-col mt-3 text-white font-normal text-base">
+          <ul className="flex flex-row gap-3 lg:gap-0 justify-center lg:flex-col mt-3 text-white font-normal text-base">
             <li className="pt-2">Home</li>
             <li className="pt-2">About Us</li>
             <li className="pt-2">Blogs</li>

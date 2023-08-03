@@ -47,7 +47,7 @@ const Blogs = () => {
       {/* Buttons */}
       <div className="flex text-white mt-6 h-10 items-center w-full justify-center">
         <a
-          href="#"
+          href="/articles"
           className="text-center border-1 rounded-3xl bg-homeItem px-5 md:px-10 p-2"
         >
           <button>Articals</button>
@@ -67,7 +67,7 @@ const Blogs = () => {
       </div>
       <div
         id="blogsCards"
-        className="flex flex-col md:flex-row gap-5 mt-16 w-full"
+        className="flex flex-col lg:flex-row gap-5 mt-16 w-full"
       >
         {blogsCards.map((items) => (
           <BlogsCards
