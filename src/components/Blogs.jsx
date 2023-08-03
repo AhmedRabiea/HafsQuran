@@ -45,22 +45,22 @@ const Blogs = () => {
         </h1>
       </div>
       {/* Buttons */}
-      <div className="flex text-white mt-6 h-10 items-center w-full justify-center">
+      <div className="flex text-white mt-6 items-center w-full justify-center">
         <a
           href="/articles"
-          className="text-center border-1 rounded-3xl bg-homeItem px-5 md:px-10 p-2"
+          className="text-center border-1 rounded-3xl bg-homeItem px-2 sm:px-5 md:px-10 p-2"
         >
           <button>Articals</button>
         </a>
         <a
           href="#"
-          className="text-center text-buttondesc border-1 rounded-3xl bg-buttonsblogs px-5 md:px-10 ml-4 p-2 hover:bg-homeItem hover:text-white"
+          className="text-center text-buttondesc border-1 rounded-3xl bg-buttonsblogs px-2 sm:px-5 md:px-10 ml-4 p-2 hover:bg-homeItem hover:text-white"
         >
           <button>Videos</button>
         </a>
         <a
           href="#"
-          className="text-center text-buttondesc border-1 rounded-3xl bg-buttonsblogs px-5 md:px-10 p-2 ml-5 hover:bg-homeItem hover:text-white"
+          className="text-center text-buttondesc border-1 rounded-3xl bg-buttonsblogs px-2 sm:px-5 md:px-10 p-2 ml-5 hover:bg-homeItem hover:text-white"
         >
           <button>Audio</button>
         </a>

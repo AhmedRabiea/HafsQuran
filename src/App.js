@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-    <div className="px-0 md:px-24">
+    <div className="md:px-5 lg:px-24">
       <Navbar setShowModal={setShowModal} />
       <Slider />
       <About />
