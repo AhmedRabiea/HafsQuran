@@ -50,7 +50,7 @@ const Contact = () => {
         ))}
       </div>
       <div className="flex flex-col-reverse lg:flex-row gap-2 lg:gap-28">
-        <div className="lg:basis-1/2">
+        <div className="lg:basis-1/2 px-1 md:px-0">
           <ContactForm />
         </div>
         <div className="lg:basis-1/2 h-full mt-10 lg:mt-16 m-2 lg:m-0">

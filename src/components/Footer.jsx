@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className="bg-footerbg mb-16 lg:mb-28 mt-40">
       <div className="h-auto p-4 lg:p-0 lg:h-96 flex flex-col lg:flex-row lg:gap-40 lg:items-center lg:justify-between w-full">
-        <div className="sm:flex sm:flex-row gap-5 lg:gap-0 lg:block lg:basis-1/3 lg:ml-4 lg:px-8">
+        <div className="flex flex-col items-center justify-center sm:flex-row gap-5 lg:gap-0 lg:block lg:basis-1/3 lg:ml-4 lg:px-8">
           <img src={footerlogo} alt="hafsquran" className="basis-1/3" />
           <p className="text-sm text-white font-normal mt-10 basis-2/3">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -45,7 +45,7 @@ const Footer = () => {
             />
             <a
               href="#"
-              className="bg-white mr-4  p-2 rounded-lg text-sm font-normal "
+              className="bg-white sm:mr-4  p-2 rounded-lg text-sm font-normal "
             >
               <button>Subscribe</button>
             </a>
