@@ -201,8 +201,8 @@ const PopupRegisteration = (props) => {
                   {catchErrors.number}
                 </span>
               </div>
-              <div className="flex gap-8">
-                <div className="mb-6 basis-1/2">
+              <div className="flex flex-col md:flex-row gap-0 md:gap-8">
+                <div className="mb-6 md:basis-1/2">
                   <label
                     for="country"
                     className="block mb-2 text-sm font-medium"
@@ -226,7 +226,7 @@ const PopupRegisteration = (props) => {
                     {catchErrors.country}
                   </span>
                 </div>
-                <div className="mb-6 basis-1/2">
+                <div className="mb-6 md:basis-1/2">
                   <label
                     htmlFor="city"
                     className="block mb-2 text-sm font-medium"
@@ -273,8 +273,8 @@ const PopupRegisteration = (props) => {
                   {catchErrors.position}
                 </span>
               </div>
-              <div className="flex gap-8">
-                <div className="mb-6 basis-1/2">
+              <div className="flex flex-col md:flex-row md:gap-8">
+                <div className="mb-6 md:basis-1/2">
                   <label
                     for="Password"
                     className="block mb-2 text-sm font-medium"
@@ -296,7 +296,7 @@ const PopupRegisteration = (props) => {
                     {catchErrors.password}
                   </span>
                 </div>
-                <div className="mb-6 basis-1/2">
+                <div className="mb-6 md:basis-1/2">
                   <label
                     for="Password"
                     className="block mb-2 text-sm font-medium"
@@ -319,7 +319,7 @@ const PopupRegisteration = (props) => {
                   </span>
                 </div>
               </div>
-              <div className="flex gap-10 items-center justify-center mb-6">
+              <div className="flex flex-col gap-4 md:flex-row md:gap-10 items-center justify-center mb-6">
                 <button
                   onClick={handleRegister}
                   className="p-2 px-10 md:px-24 bg-homeItem rounded-lg text-white flex items-center justify-center gap-2"
@@ -339,7 +339,7 @@ const PopupRegisteration = (props) => {
         <Route
           path="signin"
           element={
-            <div id="signInForm" className="w-80">
+            <div id="signInForm" className="md:w-96">
               <div className="mb-6">
                 <label htmlFor="email">Your Email</label>
                 <input
