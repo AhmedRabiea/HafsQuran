@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
+import helperService from "../services/helper.sercie";
 
 const PopupRegisteration = (props) => {
   const [firstName, setFirstName] = useState("");
@@ -21,22 +22,14 @@ const PopupRegisteration = (props) => {
   const [loginPassword, setLoginPassword] = useState("");
   const [loginError, setLoginError] = useState({});
 
-  const [showRegister, setShowRegister] = useState(false);
-
   const getCountries = async () => {
-    const result = await axios.get(
-      "https://mars.bltzo.com/api/v1/helper/countries"
-    );
-
-    setMyCountries(result.data.data.countries);
+    const countries = await helperService.getCountries();
+    setMyCountries(countries);
   };
 
   const getPositions = async () => {
-    const positionsResult = await axios.get(
-      "https://mars.bltzo.com/api/v1/helper/positions"
-    );
-
-    setMyPositions(positionsResult.data.data.positions);
+    const positions = await helperService.getPositions();
+    setMyPositions(positions);
   };
 
   const handleRegister = () => {
@@ -86,9 +79,6 @@ const PopupRegisteration = (props) => {
 
   useEffect(() => {
     getCountries();
-  }, []);
-
-  useEffect(() => {
     getPositions();
   }, []);
 
